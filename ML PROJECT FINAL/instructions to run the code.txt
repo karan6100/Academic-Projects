@@ -1,0 +1,6 @@
+1. keep all the csv files attached into a single folder.
+2. change the working directory of the r file to the obove folder and run the code stempby step.
+3. library Fselector will require java installed in your machine
+4. as our code covers a lot of models, so to avoid variables name confusions we have the command to remove all the variables and reload them as per the new model in the start of every model.
+5. due to high computation requirement of SVM, it has been trained on a different(small dataset) provided by the bank.
+6. tuning of SVM requires a lot of time in a general machine.(be patient.)
