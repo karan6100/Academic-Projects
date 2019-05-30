@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Sentiment Analysis</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fontawesome-4.2.0.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='framework.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='layout.css') }}">
+<link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row0">
+  <div id="topbar" class="clear">
+    <!-- ################################################################################################ -->
+    <div class="fl_left">
+      <ul class="nospace linklist">
+        <li><font size = "4">Python Project</font></li>
+        <!-- <li><a href="#">Ref 1</a></li>
+        <li><a href="#">Ref 2</a></li>
+        <li><a href="#">Ref 3</a></li>
+        <li><a href="#">Ref 4</a></li>
+        <li><a href="#">Ref 5</a></li> -->
+      </ul>
+    </div>
+    <div class="fl_right">
+      <ul class="nospace linklist">
+
+        <li>Aegis School of Data Science</li>
+      </ul>
+    </div>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row1">
+  <header id="header" class="clear">
+    <!-- ################################################################################################ -->
+    <div id="logo" class="fl_left">
+      <h1><a href="/">Sentiment Analysis</a></h1>
+    </div>
+    <!-- ################################################################################################ -->
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li><a href="/">Home</a></li>
+        <li><a class="drop" href="#">Analyze</a>
+          <ul>
+            <li><a href="Tweets_Analysis">Tweets Sentiment Analysis</a></li>
+            <li><a href="File_Analysis">File Sentiment Analysis</a></li>
+            <li><a href="Course_Analysis">Udemy Course's Review Sentiment Analysis</a></li>
+            <!-- <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li> -->
+          </ul>
+        </li>
+        <li class="active"><a href="Details">Project Details</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row2 bgded" style="background-image:url('../images/demo/backgrounds/1.png');">
+  <div class="overlay">
+    <div id="breadcrumb" class="clear">
+      <!-- ################################################################################################ -->
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="Details"><font size="4">Project Details</font size></a></li>
+      </ul>
+      <!-- ################################################################################################ -->
+    </div>
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <main class="container clear" style="background-color:WhiteSmoke">
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <!-- <div class="sidebar one_quarter first"> -->
+      <!-- ################################################################################################ -->
+
+    <h6><br><br><center><li>  Twitter Sentiment Analysis </li></center> </h6>
+      <p><center> Collects and provides sentiment analysis of people's opinion on the desired topic </center></li></p>
+      <!-- <nav class="sdb_holder"> -->
+      <h6><br><br><center><li> Text File Sentiment Analysis:</li></center> </h6>
+        <p><center>Provides sentiment analysis of the .csv file.Also creates wordcloud for entire text file.<br>Also creates worcloud for the phrases associated with negative sentiments   </center></p>
+
+
+      <h6><br><br><center><li> Online Course Review Analysis:</li></center></h6>
+
+         <p><font size="2"><center> Provides Analysis of desired MOOC so that people who wish to apply for course would get the overview of it.</center> </font size> </p>
+      <body>
+          <!-- <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input  name="submit" type="submit" value="&nbsp;&nbsp;&nbsp;Submit&nbsp;&nbsp;&nbsp;">
+          </li> -->
+
+      </nav>
+      <!-- ################################################################################################ -->
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <div class="content three_quarter">
+      <!-- ################################################################################################ -->
+      <!-- <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      Sentiment Analysis
+     </h1> -->
+      <!-- ################################################################################################ -->
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row4">
+  <section id="cta" class="clear">
+    <!-- ################################################################################################ -->
+    <div class="center btmspace-50">
+    </div>
+    <div class="group">
+      <div class="colour-1 one_half first">
+        <article class="group colour-1">
+          <!-- ################################################################################################ -->
+          <!-- ################################################################################################ -->
+        </article>
+      </div>
+      <div class="colour-2 one_half">
+        <article class="group colour-2">
+          <!-- ################################################################################################ -->
+          <!-- ################################################################################################ -->
+        </article>
+      </div>
+    </div>
+    <!-- ################################################################################################ -->
+    <div class="clear"></div>
+  </section>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row6">
+  <div id="copyright" class="clear">
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<script type = "text/javascript" src= "{{ url_for('static', filename = 'jquery.min.js') }}"></script>
+<script type = "text/javascript" src = "{{ url_for('static', filename = 'jquery.mobilemenu.js') }}"></script>
+</body>
+</html>

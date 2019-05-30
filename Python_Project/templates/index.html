@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sentiment Analysis</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fontawesome-4.2.0.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='framework.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='layout.css') }}">
+<link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row0">
+  <div id="topbar" class="clear">
+    <!-- ################################################################################################ -->
+    <div class="fl_left">
+      <ul class="nospace linklist">
+      	<li><font size = "4">Python Project</font></li>
+
+      </ul>
+    </div>
+    <div class="fl_right">
+      <ul class="nospace linklist">
+        <li>Aegis School of Data Science</li>
+      </ul>
+    </div>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row1">
+  <header id="header" class="clear">
+    <!-- ################################################################################################ -->
+    <div id="logo" class="fl_left">
+      <h1><a href="/">Sentiment Analysis</a></h1>
+    </div>
+    <!-- ################################################################################################ -->
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="/">Home</a></li>
+        <li><a class="drop" href="#">Analyze</a>
+          <ul>
+            <li><a href="Tweets_Analysis">Tweets Sentiment Analysis</a></li>
+            <li><a href="File_Analysis">File Sentiment Analysis</a></li>
+            <li><a href="Course_Analysis">Udemy Course's Review Sentiment Analysis</a></li>
+
+          </ul>
+        </li>
+        <li><a href="Details">Project Details</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row2 bgded" style="background-image:url('C:/Users/LENOVO/Desktop/flask_proj/flask_pro/static/1.png');">
+  <div class="overlay">
+    <div id="intro" class="clear">
+      <!-- ################################################################################################ -->
+      <article class="one_third first">
+        <h3 class="heading">Tweets Sentiment Analysis</h3>
+        <ul class="nospace">
+          <li>Max No</li>
+          <li>of tweets</li>
+          <li>per search</li>
+          <li>is limited</li>
+          <li>to 100 tweets</li>
+        </ul>
+        <p class="link"><a href="Tweets_Analysis">View &raquo;</a></p>
+      </article>
+      <article class="one_third">
+        <h3 class="heading">Text File Sentiment Analysis</h3>
+        <ul class="nospace">
+          <li>the textfile</li>
+          <li>should be in </li>
+          <li>the form of csv</li>
+          <li>and all the text should be </li>
+          <li>in the first column</li>
+        </ul>
+        <p class="link"><a href="File_Analysis">View &raquo;</a></p>
+      </article>
+      <article class="one_third">
+        <h3 class="heading">Online Course Reviews Analysis</h3>
+        <ul class="nospace">
+          <li>All the courses are</li>
+          <li>from udemy and</li>
+          <li>you can provide any</li>
+          <li>course name for</li>
+          <li>checking analysis</li>
+        </ul>
+        <p class="link"><a href="Course_Analysis">View &raquo;</a></p>
+      </article>
+      <!-- ################################################################################################ -->
+    </div>
+  </div>
+</div>
+<!-- ################################################################################################ -->
+
+<!-- ################################################################################################ -->
+<div class="wrapper row4">
+  <section id="cta" class="clear">
+    <!-- ################################################################################################ -->
+    <div class="center btmspace-50">
+    </div>
+    <div class="group">
+      <div class="colour-1 one_half first">
+        <article class="group colour-1">
+          <!-- ################################################################################################ -->
+          <!-- ################################################################################################ -->
+        </article>
+      </div>
+      <div class="colour-2 one_half">
+        <article class="group colour-2">
+          <!-- ################################################################################################ -->
+          <!-- ################################################################################################ -->
+        </article>
+      </div>
+    </div>
+    <!-- ################################################################################################ -->
+    <div class="clear"></div>
+  </section>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row6">
+  <div id="copyright" class="clear">
+    <!-- ################################################################################################ -->
+
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<script type = "text/javascript" src= "{{ url_for('static', filename = 'jquery.min.js') }}"></script>
+<script type = "text/javascript" src = "{{ url_for('static', filename = 'jquery.mobilemenu.js') }}"></script>
+</body>
+</html>

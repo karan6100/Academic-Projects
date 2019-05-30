@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Sentiment Analysis</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fontawesome-4.2.0.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='framework.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='layout.css') }}">
+<link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<style>
+div#loading{
+position: absolute;
+width: 300px;
+height: 200px;
+z-index: 15;
+margin: -100px 0 0 -150px;
+display: none;
+background: url(/static/ajax-loader.gif) no-repeat;
+top: 50%;
+left: 50%;
+cursor: wait;
+}
+</style>
+<body id="top">
+	  <div id="loading"></div>
+ 	<div id="content">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row0">
+  <div id="topbar" class="clear">
+    <!-- ################################################################################################ -->
+    <div class="fl_left">
+      <ul class="nospace linklist">
+        <li><font size = "4">Python Project</font></li>
+      </ul>
+    </div>
+    <div class="fl_right">
+      <ul class="nospace linklist">
+        <li>Aegis School of Data Science</li>
+      </ul>
+    </div>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row1">
+  <header id="header" class="clear">
+    <!-- ################################################################################################ -->
+    <div id="logo" class="fl_left">
+      <h1><a href="/">Sentiment Analysis</a></h1>
+    </div>
+    <!-- ################################################################################################ -->
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li><a href="/">Home</a></li>
+        <li class="active"><a class="drop" href="#">Analyze</a>
+          <ul>
+            <li><a href="Tweets_Analysis">Tweets Sentiment Analysis</a></li>
+            <li><a href="File_Analysis">File Sentiment Analysis</a></li>
+            <li><a href="Course_Analysis">Udemy Course's Review Sentiment Analysis</a></li>
+
+          </ul>
+        </li>
+        <li><a href="Details">Project Details</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row2 bgded">
+  <div class="overlay">
+    <div id="breadcrumb" class="clear">
+      <!-- ################################################################################################ -->
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="Course_Analysis">Course_Analysis</a></li>
+      </ul>
+      <!-- ################################################################################################ -->
+    </div>
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <main class="container clear" style="background-color:WhiteSmoke">
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <div class="group btmspace-50 demo">
+      <div class="one_third first">.</div>
+      <div class="one_third">
+      <form class="options" method="post", action="/Course_Results">
+        </form>
+        <form class="senti" method="post" action="/Course_Analysis">
+      <!-- ################################################################################################ -->
+      <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Analyze Courses</h4>
+        <ul>
+          <li>
+            <label for="course">Enter Course Name <span>*</span></label>
+            <input type="text" name="course" id="Topic" value="" size="27">
+          </li>
+          <br>
+            <button type="submit" onclick="loading();">&nbsp;&nbsp;&nbsp;Check&nbsp;&nbsp;&nbsp;</button>
+          
+        </ul>
+        </form>
+
+   <!--  <div class="imgcontainer">
+      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+    </div> -->
+
+   <!-- <div class="container" style="text-align: center;">
+      <label for="topic"><font face="courier"><b>Enter Topic Name : </b></font></label>
+      <input type="text"  name="topic" required>
+      <br><br>
+      <label for="tweets"><font face="courier"><b> Enter Number Of Tweets : </b></font></label>
+      <input type="text"  name="tweets" required>
+      <br><br>  -->
+
+    </div>
+    </div>
+      <div class="one_third"></div>
+      <div class="content three_quarter">
+        <h3>{{ Course_header }}&nbsp;{{course_lst_no}}</h3>
+        <ul>
+          {% for course in course_lst %}
+            <form class="senti" method="post" action="/Course_Results">
+            <li>
+              <input type="text" name="course" id="Topic" value="{{ course }}" size="50">
+              <button type="submit" onclick="loading();">&nbsp;&nbsp;&nbsp;Analyze&nbsp;&nbsp;&nbsp;</button>
+           </li>
+            <br>
+            </form>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <!-- ################################################################################################ -->
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+   <!-- <div class="content three_quarter"> -->
+      <!-- ################################################################################################ -->
+    <!--  <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      Sentiment Analysis</h1>
+
+      <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+      <h2><font face="courier">Topic : {{topic}}</font></h2>
+      <h2><font face="courier">tweets analysed : {{total}}</font></h2>
+      <h2><font face="courier">Average Polarity : {{ASentiment}}</font></h2>
+      <h2><font face="courier">Current Time : {{T}}</font></h2>
+      <img src="/static/sentiment_analysis.png"> -->
+      <!-- ################################################################################################ -->
+  <!--  </div> -->
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row4">
+  <section id="cta" class="clear">
+    <!-- ################################################################################################ -->
+    <div class="center btmspace-50">
+    </div>
+    <div class="group">
+      <div class="colour-1 one_half first">
+        <article class="group colour-1">
+          <!-- ################################################################################################ -->
+          <!-- ################################################################################################ -->
+        </article>
+      </div>
+      <div class="colour-2 one_half">
+        <article class="group colour-2">
+          <!-- ################################################################################################ -->
+          <!-- ################################################################################################ -->
+        </article>
+      </div>
+    </div>
+    <!-- ################################################################################################ -->
+    <div class="clear"></div>
+  </section>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row6">
+  <div id="copyright" class="clear">
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<script type = "text/javascript" src= "{{ url_for('static', filename = 'jquery.min.js') }}"></script>
+<script type = "text/javascript" src = "{{ url_for('static', filename = 'jquery.mobilemenu.js') }}"></script>
+<script type="text/javascript">// <![CDATA[
+       function loading(){
+           $("#loading").show();
+           $("#content").hide();
+       }
+// ]]></script>
+</div>
+</body>
+</html>
